@@ -5,7 +5,7 @@ require.config({
 
   deps: ['main'],
 
-  baseUrl: "/js/",
+  baseUrl: "/voice-of-money/js/", // this is github.io branch... specify the repo
 
   paths: {
     "jquery": "/lib/jquery-2.1.0.min",
