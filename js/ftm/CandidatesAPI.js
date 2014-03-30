@@ -78,7 +78,7 @@ define(['jquery', 'underscore', 'xml2json'], function($, _, xml2json) {
 
       $.get('http://api.followthemoney.org/candidates.industries.php', opts)
       .fail(function(xml) {
-        alert("[CandidatesAPI.industries] Error getting industries!");
+        //alert("[CandidatesAPI.industries] Error getting industries!");
         console.log(xml);
         ret.reject(xml2json(xml));
       })
@@ -92,7 +92,7 @@ define(['jquery', 'underscore', 'xml2json'], function($, _, xml2json) {
           return;
 
         } else if (results.error) {
-          alert('[CandidatesAPI.industries] Error in API parameters');
+          // alert('[CandidatesAPI.industries] Error in API parameters');
           ret.reject(results.error['@attributes']);
           return;
         }
@@ -144,7 +144,7 @@ define(['jquery', 'underscore', 'xml2json'], function($, _, xml2json) {
 
       $.get('http://api.followthemoney.org/candidates.top_contributors.php', opts)
       .fail(function(xml) {
-        alert("[CandidatesAPI.top_contributors] Error getting top_contributors!");
+        // alert("[CandidatesAPI.top_contributors] Error getting top_contributors!");
         console.log(xml);
         ret.reject(xml2json(xml));
       })
@@ -158,7 +158,7 @@ define(['jquery', 'underscore', 'xml2json'], function($, _, xml2json) {
           return;
 
         } else if (results.error) {
-          alert('[CandidatesAPI.top_contributors] Error in API parameters');
+          // alert('[CandidatesAPI.top_contributors] Error in API parameters');
           ret.reject(results.error['@attributes']);
           return;
         }
