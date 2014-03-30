@@ -8,15 +8,15 @@ require.config({
   baseUrl: "/voice-of-money/js/", // this is github.io branch... specify the repo
 
   paths: {
-    "jquery": "/lib/jquery-2.1.0.min",
-    "backbone": "/lib/backbone-min",
-    "d3": "/lib/d3.v3.3.2.min",
-    "bootstrap": "/lib/bootstrap_232/js/bootstrap.min",
-    "tpl": "/lib/tpl",
-    "underscore": "/lib/lodash.min",
-    "highcharts": "/lib/highcharts-all",
-    "jquery-slider": "/lib/jquery-ui-1.10.4.slider",
-    "numeral": "/lib/numeral.min"
+    "jquery": "/voice-of-money/lib/jquery-2.1.0.min",
+    "backbone": "/voice-of-money/lib/backbone-min",
+    "d3": "/voice-of-money/lib/d3.v3.3.2.min",
+    "bootstrap": "/voice-of-money/lib/bootstrap_232/js/bootstrap.min",
+    "tpl": "/voice-of-money/lib/tpl",
+    "underscore": "/voice-of-money/lib/lodash.min",
+    "highcharts": "/voice-of-money/lib/highcharts-all",
+    "jquery-slider": "/voice-of-money/lib/jquery-ui-1.10.4.slider",
+    "numeral": "/voice-of-money/lib/numeral.min"
   },
 
   shim: {
