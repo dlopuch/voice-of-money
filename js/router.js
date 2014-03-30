@@ -21,6 +21,9 @@ define(['backbone', 'views/CandidateLoader'], function(Backbone, CandidateLoader
 
     loadRace: function(state, year, office, district) {
       $("#splash").hide();
+      if (window.ga) {
+        window.ga('send', 'event', 'raceLoaded', state, year + "_" + office + "_" + district);
+      }
 
       var filter, query = {
         state: state || 'CA',
