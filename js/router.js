@@ -22,7 +22,8 @@ define(['backbone', 'views/CandidateLoader'], function(Backbone, CandidateLoader
     loadRace: function(state, year, office, district) {
       $("#splash").hide();
       if (window.ga) {
-        window.ga('send', 'event', 'raceLoaded', state, year + "_" + office + "_" + district);
+        window.ga('send', 'event', 'voice-of-money', 'race loaded',
+                  state + " " + year + " " + office + (district ? " " + district : ""));
       }
 
       var filter, query = {
@@ -46,6 +47,10 @@ define(['backbone', 'views/CandidateLoader'], function(Backbone, CandidateLoader
       })
       .fail(function(error) {
         console.log("Error loading candidates", error);
+        if (window.ga) {
+          window.ga('send', 'event', 'voice-of-money', 'race failed to load',
+                    state + " " + year + " " + office + (district ? " " + district : ""));
+        }
       });
     }
   }))();
